@@ -1,3 +1,38 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+-- local function to_camel_case_variable_style()
+--   -- 获取选中区域的起始和结束行
+--   local startLine = vim.fn.line("'<") -- 获取选中起始行
+--   local endLine = vim.fn.line("'>") -- 获取选中结束行
+--   local lines = vim.api.nvim_buf_get_lines(0, startLine - 1, endLine, false)
+--
+--   for i, line in ipairs(lines) do
+--     -- 转换下划线命名到驼峰式
+--     local converted = line
+--       -- 先处理下划线后的小写字母，转换为大写字母
+--       :gsub("_(%l)", function(s)
+--         return s:upper() -- 将下划线后的小写字母转为大写
+--       end)
+--       -- 然后将首字母大写
+--       :gsub("%l", function(s)
+--         return s:sub(1):upper()
+--       end)
+--
+--     lines[i] = converted
+--   end
+--
+--   vim.api.nvim_buf_set_lines(0, startLine - 1, endLine, false, lines)
+-- end
+--
+-- vim.keymap.set("v", "<leader>cs", function()
+--   to_camel_case_variable_style()
+-- end, { desc = "to golang style variables" })
+--
+-- -- pCreatedAt
+-- -- PCREATEDAT
+-- -- p_created_at
+-- -- p_created_at
+-- -- pcreatedat
+-- -- 提供一个neovim lua函数，输入选择内容，如
+-- -- var p_created_at = "arst"

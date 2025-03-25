@@ -29,7 +29,12 @@ return {
         end,
         desc = "sniprun info",
       },
-      vim.api.nvim_set_keymap("n", "<leader>rs", ":edit .log<CR>:normal! G<CR>", { silent = true, noremap = true }),
+      vim.api.nvim_set_keymap(
+        "n",
+        "<leader>rs",
+        ":edit .log<CR>:normal! G<CR>:setfiletype json<CR>",
+        { silent = true, noremap = true }
+      ),
       vim.api.nvim_set_keymap(
         "n",
         "<leader>ra",
