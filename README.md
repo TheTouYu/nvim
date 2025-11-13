@@ -1,9 +1,4 @@
-3
-4
-5
-6
-7
-8
-9
-10
-11
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
